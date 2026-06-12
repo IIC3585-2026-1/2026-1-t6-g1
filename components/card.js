@@ -23,6 +23,7 @@ template.innerHTML = `
     <div class="card">
         <h2 id="title"></h2>
         <p id="content"></p>
+        <slot></slot>
     </div>
 `;
 
