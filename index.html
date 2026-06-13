@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <title>Web Components</title>
 </head>
 <body>
     <h1>Web Components</h1>
     <my-card title="Card Title" content="This is the content of the card."></my-card>
-    
-    <my-card>
-        <div class="slider-item">
-            <label>Meta (ml)</label>
-            <my-slider min="0" max="3000" value="2000" step="100" unit="ml"></my-slider>
-        </div>
-        <div class="slider-item">
-            <label>Intensidad</label>
-            <my-slider min="1" max="5" value="3" step="1"
-                labels='{"1":"Baja","2":"Baja-media","3":"Media","4":"Media-alta","5":"Alta"}'>
-            </my-slider>
-        </div>
-    </my-card>
+
+    <div class="body-flexbox">
+        <my-card title="Registrar ingesta de agua" content="Ajusta tu consumo diario objetivo">
+            <div class="slider-item">
+                <label>Meta (ml)</label>
+                <my-slider min="0" max="3000" value="2000" step="100" unit="ml"></my-slider>
+            </div>
+            <div class="slider-item">
+                <label>Intensidad</label>
+                <my-slider min="1" max="5" value="3" step="1"
+                    labels='{"1":"Baja","2":"Baja-media","3":"Media","4":"Media-alta","5":"Alta"}'>
+                </my-slider>
+            </div>
+        </my-card>
+
+        <my-card title="Metas semanales">
+            <my-progress-bar name="Pasos totales" value="84"></my-progress-bar>
+            <my-progress-bar name="Minutos activos" value="72"></my-progress-bar>
+            <my-progress-bar name="Agua diaria" value="60"></my-progress-bar>
+            <my-progress-bar name="Horas de sueño" value="90"></my-progress-bar>
+        </my-card>
+    </div>
 
 
     <script type="module" src="/components/card.js"></script>
     <script type="module" src="/components/slider.js"></script>
+    <script type="module" src="/components/progress_bar.js"></script>
 </body>
 </html>

@@ -1,0 +1,11 @@
+.body-flexbox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 10px;
+    align-items: stretch;
+}
+
+.body-flexbox my-card {
+    max-width: none;
+}

@@ -2,21 +2,30 @@ const template = document.createElement("template");
 
 template.innerHTML = `
     <style>
+        :host {
+            display: block;
+            max-width: clamp(100px, 100%, 300px);
+            heigth: 100%;
+        }
+
         .card {
             border: 1px solid #ccc;
             border-radius: 5px;
             padding: 16px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             font-family: Arial, sans-serif;
-            max-width: clamp(100px, 100%, 300px);
+            width: 100%;
+            box-sizing: border-box;
+            height: 100%;
         }
+
         h2 {
             margin-top: 0;
             font-size: 1.2rem;
         }
 
         p {
-            margin-bottom: 0;
+            margin-bottom: 20px;
         }
     </style>
 
